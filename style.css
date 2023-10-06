@@ -1,0 +1,161 @@
+/* Reset some default styles for better consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply the navy blue background and Montserrat font */
+body {
+    background-color: rgb(3, 3, 52);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+/* Style the navigation bar */
+header {
+    background-color: rgb(3, 3, 52);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+nav h1 {
+    font-size: 2 rem;
+    font-weight: 500;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: color 0.5s;
+}
+
+nav ul li a:hover {
+    font-size: 18px;
+    color: rgb(255, 216, 44);
+
+}
+
+/* Style the main content container */
+main {
+    padding: 2rem 0;
+}
+
+main .container {
+    width: 100%;
+    max-width: 1200px;
+    font-size: 200px;
+    margin-bottom: 10%;
+    margin-right: 10%;
+    margin-left: 10%    ;
+    padding: auto;
+    font-family: 'Bebas Neue';
+    text-align: center;
+    animation: fadeIn 4s;
+
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+main p{
+    font-size: 50px;
+    font-family: 'Montserrat';
+
+}
+main .about {
+    width: 90%;
+    max-width: 1200px;
+    margin:  0 auto 5% auto;
+    background-color: #3b345cca;
+    border-radius: 20px;
+    padding: 5%;
+    left: -100px; 
+    transition: left 0.5s ease-in-out;
+}
+
+@keyframes slide {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+main .about h2{
+    font-size: 25px;
+    font-weight: 700;
+    
+}
+main .about .p1{
+    font-size: 15px;
+    font-weight: 500;
+}
+main .Events{
+    font-size:  30px;
+    text-align: center;
+}
+ main .event1 {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
