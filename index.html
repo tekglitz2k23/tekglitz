@@ -1,69 +1,267 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
     <title style="font-weight: bolder; font-size: 20px;">TekGlitz</title>
+    <title>Parallax Website</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat';
+            overflow-x: hidden;
+            /* Hide horizontal scrollbar on smaller screens */
+        }
+
+
+
+        /* Parallax Container Styles */
+        .parallax {
+            background-image: url('parallax.jpg');
+            /* Set your parallax background image */
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+            font-size: 250px;
+            font-family: 'Bebas neue';
+
+
+        }
+
+        /* Content Styles */
+        .content1 {
+            padding: 50px;
+            text-align: left;
+
+        }
+
+        .content p {
+            font-weight: 500;
+        }
+
+        .con1 {
+            background-color: rgba(0, 0, 97, 0.24);
+            padding: 50px;
+            border-radius: 10px;
+            margin-bottom: 2%;
+        }
+
+        .content2 {
+            align-items: center;
+        }
+
+        .h2 {
+            align-items: center;
+        }
+
+        .container {
+            position: relative;
+            width: 50%;
+            align-content: center;
+        }
+
+        .event1 {
+            display: block;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #2e2e2eda;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        nav h1 {
+            font-size: 2 rem;
+            font-weight: 500;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 10px;
+            transition: color 0.5s;
+        }
+
+        nav ul li a:hover {
+            font-size: 18px;
+            color: rgb(255, 216, 44);
+
+        }
+
+        /* Popup Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-image {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <nav>
             <div class="container">
                 <h1>Tek Glitz</h1>
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Register</a></li>
-                
+                    <li><a href="about">About</a></li>
+                    <li><a href="event1.html">Events</a></li>
+                    <li><a href="register">Register</a></li>
+
                 </ul>
             </div>
         </nav>
     </header>
+    <div class="parallax"> TEKGLITZ </div>
 
-    <main>
+    <!-- About Section -->
+    <div class="content1" id="about">
+        <div class="con1">
+            <h2>About Jerusalem</h2>
+            <p> Jerusalem College of Engineering was established in the year 1995 under the umbrella of Jerusalem
+                Education Trust to impart quality engineering education. Over the period of 23 years it has made a mark
+                of itself and got established as an institution which offers excellent engineering education.
+
+                The Institute has very good infrastructural facilities and laboratories with state-of-the art equipment.
+                The institute is accredited by NAAC and NBA.</p>
+        </div>
+
+        <div class="con1">
+            <h2>About TekGlitz</h2>
+            <p> "Tek Glitzz" is an exciting symposium scheduled for October 14th, 2023.
+                This event promises a blend of technical and non-technical activities, making it an inclusive
+                opportunity for students from diverse academic backgrounds to participate.
+                If you have a passion for technology or simply enjoy a fun and enriching atmosphere, this symposium is
+                the perfect platform for showcasing your talents and engaging with a vibrant community of like-minded
+                individuals.
+                Get ready for a day of learning, innovation, and entertainment at "Tek Glitzz"!</p>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="content2">
+        <h2> Events</h2>
         <div class="container">
-            <h2>Tek Glitz</h2>
-            <p>A National level symposiyum</p>
+            <img src="1event.png" alt="Avatar" class="event1">
+            <div class="overlay">
+                <div class="text">An exhilarating debugging adventure as we dive deep into the world of
+                    software troubleshooting! Our Debugging Frenzy event is designed to sharpen
+                    your debugging skills, enhance your problem-solving abilities, and boost your
+                    confidence when tackling those tricky coding issues. Whether you&#39;re a
+                    seasoned developer or just starting out, this event has something for
+                    everyone.
+                    Whether you&#39;re looking to fine-tune your skills or learn from the best,
+                    Debugging Frenzy has it all. Register now and get ready to conquer those bugs
+                    like a pro. See you there! World</div>
+            </div>
         </div>
-        <div class="about">
-            <h2> About Jerusalem</h2><br>
-            <p1> Jerusalem College of Engineering was established in the year 1995 under the umbrella of Jerusalem Education Trust to impart quality engineering education. Over the period of 23 years it has made a mark of itself and got established as an institution which offers excellent engineering education.
+    </div>
 
-                The Institute has very good infrastructural facilities and laboratories with state-of-the art equipment. The institute is accredited by NAAC and NBA.
-            </p1>
-    
-        </div>
-        <div class="about">
-            <h2> About Tek Glitz</h2><br>
-            <p1> "Tek Glitzz" is an exciting symposium scheduled for October 14th, 2023.
-                 This event promises a blend of technical and non-technical activities, making it an inclusive opportunity for students from diverse academic backgrounds to participate.
-                 If you have a passion for technology or simply enjoy a fun and enriching atmosphere, this symposium is the perfect platform for showcasing your talents and engaging with a vibrant community of like-minded individuals.
-                 Get ready for a day of learning, innovation, and entertainment at "Tek Glitzz"!
-            </p1>
-     
-        </div>
-        <div class="Events">
-            <h2> Events</h2>
-            <div class="event1">
-               <img src="1event.png" > </div>
-        </div>
-        
-    
-    </main>
-    <div></div>
+
+    <!-- Contact Section -->
+    <div class="content" id="register">
+        <h2>Contact</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <!-- Popup -->
     <div class="popup" id="popup">
         <img src="popup-image.jpg" alt="Popup Image" class="popup-image">
     </div>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Your Website</p>
-        </div>
-    </footer>
+
+    <!-- JavaScript to Show Popup on Page Load -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Show the popup when the page loads
+            document.getElementById("popup").style.display = "flex";
+
+            // Close the popup when clicked
+            document.getElementById("popup").addEventListener("click", function () {
+                document.getElementById("popup").style.display = "none";
+            });
+        });
+    </script>
 </body>
+
 </html>
